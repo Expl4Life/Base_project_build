@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACMA,uBAAuB;AAGnB,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDP5C,AAAA,IAAI,CAAC;IAED,KAAK,EAAE,GAAG;GAEb",
+    "sources": [
+        "main.scss",
+        "_mixins.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

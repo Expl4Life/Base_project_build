@@ -1,0 +1,52 @@
+$micro: 365px;
+$small: 812px;
+$small-medium: 990px;
+$medium: 1282px;
+$large: 1440px;
+
+/* stylelint-disable */
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $small) {
+      @content;
+    }
+  }
+
+  @else if $media == MS {
+    @media only screen and (min-width: $medium) and (max-width: $large - 1) {
+      @content;
+    }
+  }
+
+  @else if $media == LS {
+    @media only screen and (min-width: $large) {
+      @content;
+    }
+  }
+
+  @else if $media == SS {
+    @media only screen and (min-width: $small-medium + 1) and (max-width: $medium - 1) {
+      @content;
+    }
+  }
+
+  @else if $media == XS {
+    @media only screen and (min-width: $small + 1) and (max-width: $small-medium) {
+      @content;
+    }
+  }
+
+  @else if $media == micro {
+    @media only screen and (max-width: $micro - 1) {
+      @content;
+    }
+  }
+}
+
+@mixin makeFullWidth() {
+  @include respond-to(mobile) {
+    width: calc(100% + #{$mobile-padding} + #{$mobile-padding});
+    margin-left: -$mobile-padding;
+    margin-right: -$mobile-padding;
+  }
+}

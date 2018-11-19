@@ -1,0 +1,7 @@
+/* stylelint-disable */
+@media only screen and (max-width: 812px) {
+
+  body {
+    color: red;
+  }
+}

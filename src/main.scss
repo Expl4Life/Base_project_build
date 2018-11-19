@@ -1,0 +1,7 @@
+@import './mixins';
+
+body {
+  @include respond-to(mobile) {
+    color: red;
+  }
+}
